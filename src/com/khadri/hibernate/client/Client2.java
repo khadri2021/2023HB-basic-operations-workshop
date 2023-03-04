@@ -1,4 +1,4 @@
-package com.khadri.hibernate.college.client;
+package com.khadri.hibernate.client;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.khadri.hibernate.college.entity.College;
+import com.khadri.hibernate.entity.College;
 
-public class CollegeMain {
+
+public class Client2 {
 	public static void main(String[] args) {
 
 		Supplier<SessionFactory> sessionFactory = () -> {
@@ -37,7 +38,7 @@ public class CollegeMain {
 
 			Session session = factory.openSession();
 			Transaction txn = session.beginTransaction();
-			college.setCollegeName(nameOfCollege);
+			college.setClgName(nameOfCollege);
 			session.save(college);
 			txn.commit();
 			session.close();

@@ -5,6 +5,6 @@
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/company</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
-		<mapping resource="map.xml" />
+		<mapping resource="college-mapping.xml" />
 	</session-factory>
 </hibernate-configuration>
