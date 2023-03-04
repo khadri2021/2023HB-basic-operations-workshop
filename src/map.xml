@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.college.entity.College">
+		<id name="collegeId" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="collegeName" type="string" />
+	</class>
+</hibernate-mapping>
