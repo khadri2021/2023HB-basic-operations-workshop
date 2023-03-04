@@ -5,7 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class BasicOperationSessipon {
+public class BasicOperationSession {
 
 	public static Session getSession() {
 		Configuration cfg = new Configuration();
