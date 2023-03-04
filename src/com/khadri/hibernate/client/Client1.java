@@ -25,7 +25,7 @@ public class Client1 {
 		
 		System.out.println("please enter employee salary  ");
 		double salary = sc.nextDouble();
-		emp.setSalary(salary);
+		emp.setEmpsalary(salary);
 		
 
 		sess.save(emp);

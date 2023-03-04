@@ -4,7 +4,7 @@ public class Employee {
 
 	private Integer empId;
 	private String empName;
-	private Double salary;
+	private Double empSalary;
 	public Integer getEmpId() {
 		return empId;
 	}
@@ -17,13 +17,13 @@ public class Employee {
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
-	public Double getSalary() {
-		return salary;
+	public Double getEmpsalary() {
+		return empSalary;
 	}
-	public void setSalary(Double salary) {
-		this.salary = salary;
+	public void setEmpsalary(Double empsalary) {
+		this.empSalary = empsalary;
 	}
-
-
+	
+	 
 }
 
