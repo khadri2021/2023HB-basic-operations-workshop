@@ -5,6 +5,6 @@
 			<generator class="increment" />
 		</id>
 		<property name="empName" type="string" />
-		<property name="salary" type="double" />
+		<property name="empsalary" type="double" />
 	</class>
 </hibernate-mapping>
