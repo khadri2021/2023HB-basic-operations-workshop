@@ -1,23 +1,16 @@
 package com.khadri.hibernate.client;
 
-
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import com.khadri.hibernate.entity.Employee;
-
+import com.khadri.hibernate.session.BasicOperationSessipon;
 
 public class ClientMain {
 
 	public static void main(String[] args) {
-		Configuration cfg = new Configuration();
-		cfg.configure("hibernate.cfg.xml");
 
-		SessionFactory factory = cfg.buildSessionFactory();
-
-		Session sess = factory.openSession();
+		Session sess = BasicOperationSessipon.getSession();
 
 		Transaction txn = sess.beginTransaction();
 
@@ -30,7 +23,6 @@ public class ClientMain {
 		txn.commit();
 
 		sess.close();
-		factory.close();
 
 	}
 }
