@@ -8,15 +8,12 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.khadri.hibernate.entity.Student;
+import com.khadri.hibernate.session.BasicOperationSession;
 
 public class StoreStudent {
 	public static void main(String[] args) {
 
-		Configuration conf = new Configuration();
-		conf.configure();
-		SessionFactory factory = conf.buildSessionFactory();
-		Session sess = factory.openSession();
-
+		Session sess = BasicOperationSession.getSession();
 		Transaction txn = sess.beginTransaction();
 
 		Student std = new Student();
@@ -56,7 +53,6 @@ public class StoreStudent {
 		
 		System.out.println("Record inserted successfully");
 		sess.close();
-		factory.close();
 
 	}
 
