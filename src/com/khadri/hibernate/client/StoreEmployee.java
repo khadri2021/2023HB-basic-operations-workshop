@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 import com.khadri.hibernate.entity.Employee;
 import com.khadri.hibernate.session.BasicOperationSession;
 
-public class Client1 {
+public class StoreEmployee {
 
 	public static void main(String[] args) {
 
