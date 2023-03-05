@@ -1,4 +1,4 @@
-package com.khadri.hibernate.client;
+	package com.khadri.hibernate.client;
 
 import java.util.Scanner;
 
@@ -56,6 +56,8 @@ public class Client4 {
 
 		sess.save(std);
 		txn.commit();
+		
+		System.out.println("Record inserted successfully");
 		sess.close();
 		factory.close();
 
