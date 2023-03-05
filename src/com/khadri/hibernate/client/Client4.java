@@ -22,9 +22,9 @@ public class Client4 {
 		Student std = new Student();
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("please enter Student id:  ");
-		int stdId = sc.nextInt();
-		std.setStdId(stdId);
+	//	System.out.println("please enter Student id:  ");
+	//	int stdId = sc.nextInt();
+	//	std.setStdId(stdId);
 
 		System.out.println("please enter Student name:  ");
 		String stdName = sc.next();
