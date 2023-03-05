@@ -14,7 +14,6 @@ import org.hibernate.cfg.Configuration;
 
 import com.khadri.hibernate.entity.College;
 
-
 public class Client2 {
 	public static void main(String[] args) {
 
@@ -53,12 +52,12 @@ public class Client2 {
 
 		Consumer<Set> loop = (setOfColleges) -> {
 			int i = 1;
-			
+
 			for (String string : set) {
 				System.out.println(i + ". College Name : " + string);
 				i++;
 			}
-			
+
 		};
 		loop.accept(set);
 	}
