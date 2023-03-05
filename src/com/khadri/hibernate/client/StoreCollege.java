@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 import com.khadri.hibernate.entity.College;
 import com.khadri.hibernate.session.BasicOperationSession;
 
-public class Client2 {
+public class StoreCollege {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -50,6 +50,6 @@ public class Client2 {
 		
 		session.save(college);
 		txn.commit();
-		System.out.println("Successfully Inserted.");
+		System.out.println("Record Inserted Successfully.");
 	}
 }
