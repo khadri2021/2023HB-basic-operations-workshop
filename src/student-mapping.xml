@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.entity.Student">
+		<id name="stdId" type="int" column="stdid">
+			<generator class="increment" />
+		</id>
+		<property name="stdName" type="string" column="stdName"/>
+		<property name="fatherName" type="string" column="fatherName"/>
+		<property name="town" type="string" column="town"/>
+		<property name="district" type="string" column="district"/>
+		<property name="fee" type="double" column="fee"/>
+		<property name="percentage" type="int" column="percentage"/>
+		<property name="collegeName" type="string" column="collegeName"/>
+	</class>
+</hibernate-mapping>
