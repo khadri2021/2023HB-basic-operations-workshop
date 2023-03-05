@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hibernate-mapping>
 	<class name="com.khadri.hibernate.entity.College">
-		<id name="clgId" type="int" column="collegeid">
+		<id name="clgId" type="int">
 			<generator class="increment" />
 		</id>
-		<property name="clgName" type="string" column="collegename"/>
+		<property name="clgRegNumber" type="string" />
+		<property name="clgName" type="string"/>
+		<property name="clgStrength" type="int"/>
+		<property name="clgAddress" type="string"/>
+		<property name="clgTown" type="string"/>
+		<property name="clgCity" type="string"/>
+		<property name="clgState" type="string"/>
+		<property name="clgAnnualReturns" type="double"/>
+		<property name="clgOfficeStaff" type="int"/>
+		<property name="clgTeachingStaff" type="int"/>
 	</class>
 </hibernate-mapping>

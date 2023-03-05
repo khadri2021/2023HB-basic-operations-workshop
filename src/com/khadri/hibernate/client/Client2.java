@@ -1,65 +1,55 @@
 package com.khadri.hibernate.client;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
+import java.util.Scanner;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import com.khadri.hibernate.entity.College;
-
+import com.khadri.hibernate.session.BasicOperationSession;
 
 public class Client2 {
+	private static Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
-
-		Supplier<SessionFactory> sessionFactory = () -> {
-			Configuration cfg = new Configuration();
-			cfg.configure();
-			return cfg.buildSessionFactory();
-		};
-		SessionFactory factory = sessionFactory.get();
 		College college = new College();
+		Session session = BasicOperationSession.getSession();
+		Transaction txn = session.beginTransaction();
 
-		List<String> list = new ArrayList<>();
+		System.out.println("Enter Registration Number Of The College : ");
+		String clgRegNumber = sc.next();
+		System.out.println("Enter Name Of The College : ");
+		String clgName = sc.next();
+		System.out.println("Enter Strength Of The College : ");
+		int clgStrength = sc.nextInt();
+		System.out.println("Enter Address Of The College : ");
+		String clgAddress = sc.next();
+		System.out.println("Enter Town Of The College : ");
+		String clgTown = sc.next();
+		System.out.println("Enter City Of The College : ");
+		String clgCity = sc.next();
+		System.out.println("Enter State Of The College : ");
+		String clgState = sc.next();
+		System.out.println("Enter How Much Annual Return Of The College : ");
+		double clgAnnualReturns = sc.nextDouble();
+		System.out.println("Enter How Many Office Staff in The College : ");
+		int clgOfficeStaff = sc.nextInt();
+		System.out.println("Enter How Many Teaching Staff in The College : ");
+		int clgTeachingStaff = sc.nextInt();
 
-		list.add("STSN");
-		list.add("SVDC");
-		list.add("SVBC");
-		list.add("BDC");
-		list.add("ADC");
-
-		for (String nameOfCollege : list) {
-
-			Session session = factory.openSession();
-			Transaction txn = session.beginTransaction();
-			college.setClgName(nameOfCollege);
-			session.save(college);
-			txn.commit();
-			session.close();
-
-		}
-		Consumer<SessionFactory> closingFactory = (fact) -> {
-			fact.close();
-		};
-		closingFactory.accept(factory);
-
-		Set<String> set = list.stream().collect(Collectors.toSet());
-
-		Consumer<Set> loop = (setOfColleges) -> {
-			int i = 1;
-			
-			for (String string : set) {
-				System.out.println(i + ". College Name : " + string);
-				i++;
-			}
-			
-		};
-		loop.accept(set);
+		college.setClgRegNumber(clgRegNumber);
+		college.setClgName(clgName);
+		college.setClgStrength(clgStrength);;
+		college.setClgAddress(clgAddress);
+		college.setClgTown(clgTown);
+		college.setClgCity(clgCity);
+		college.setClgState(clgState);
+		college.setClgAnnualReturns(clgAnnualReturns);
+		college.setClgOfficeStaff(clgOfficeStaff);
+		college.setClgTeachingStaff(clgTeachingStaff);
+		
+		session.save(college);
+		txn.commit();
+		System.out.println("Successfully Inserted.");
 	}
 }
