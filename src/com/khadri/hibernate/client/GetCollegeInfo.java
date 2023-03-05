@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import com.khadri.hibernate.entity.College;
 import com.khadri.hibernate.session.BasicOperationSession;
 
-public class Client3 {
+public class GetCollegeInfo {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
