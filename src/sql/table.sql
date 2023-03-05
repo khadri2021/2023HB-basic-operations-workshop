@@ -10,7 +10,6 @@ select * from employee;
 -- Client1 bug fix changes KHADRI-1-BUG-1
 alter table employee rename column salary to empSalary;
 
--- client4 changes KHADRI-4
-create table student(stdId int,stdName varchar(15),fatherName varchar(15),town varchar(15),district varchar(15),fee double(7,2),percentage int,collegeName varchar(15));
-
-select * from student;
+-- Client changes KHADRI-3-BUG-1
+create table college(clgId int,clgRegNumber varchar(30),clgName varchar(30),clgStrenth int,clgAddress varchar(30),clgTown varchar(30),clgCity varchar(30),clgState varchar(30),clgAnnualReturns double(15,2),clgOfficeStaff int,clgTeachingStaff int);
+select * from college;
