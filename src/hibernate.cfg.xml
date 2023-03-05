@@ -8,5 +8,6 @@
 		<property name="hibernate.connection.password">root</property>
 		<mapping resource="college-mapping.xml" />
 		<mapping resource="employee.xml" />
+		<mapping resource="student-mapping.xml" />
 	</session-factory>
 </hibernate-configuration>
