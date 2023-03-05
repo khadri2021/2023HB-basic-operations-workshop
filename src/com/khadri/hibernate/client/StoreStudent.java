@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.khadri.hibernate.entity.Student;
 
-public class Client4 {
+public class StoreStudent {
 	public static void main(String[] args) {
 
 		Configuration conf = new Configuration();
